@@ -27,10 +27,21 @@ namespace HospitalManagement
             foreach (var item in PacienteList)
                 item.ToString();
         }
+
+        public void AgregarPaciente(Paciente paciente)
+        {
+            PacienteList.Add(paciente);
+        }
+
+        public void RemovePaciente()
+        {
+            MostrarPacientes();
+            Console.WriteLine("Elije el numero del paciente que quieres borrar:");
+            PacienteList.Remove(PacienteList[int.Parse(Console.ReadLine())-1]);
+        }
         public override string ToString()
         {
-            return $"Nombre: {Nombre}\n" +
-                $"DNI: {DNI}\n" +
+            return base.ToString() +
                 $"Sueldo: {Sueldo}\n" +
                 $"---------\n";
         }

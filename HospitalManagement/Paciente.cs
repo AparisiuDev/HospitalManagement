@@ -27,10 +27,15 @@ namespace HospitalManagement
             Condicion = condicion;
         }
 
+        public void AsignarMedico(Medico medico)
+        {
+            Medico = medico;
+            medico.PacienteList.Add(this);
+        }
+
         public override string ToString()
         {
-            return $"Nombre: {Nombre}\n" +
-                $"DNI: {DNI}\n" +
+            return base.ToString() +
                 $"Medico asignado: {Medico.Nombre}\n" +
                 $"Condicion: {Condicion}\n" +
                 $"-------";

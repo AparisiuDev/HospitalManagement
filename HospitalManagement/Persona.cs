@@ -27,6 +27,12 @@ namespace HospitalManagement
             DNI = dni;
             Nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return $"Nombre: {Nombre}\n" +
+                $"DNI: {DNI}\n";
+        }
     }
 }
 

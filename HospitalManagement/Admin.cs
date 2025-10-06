@@ -23,8 +23,7 @@ namespace HospitalManagement
 
         public override string ToString()
         {
-            return $"Nombre: {Nombre}\n" +
-                $"DNI: {DNI}\n" +
+            return base.ToString() +
                 $"Sueldo: {Sueldo}\n" +
                 $"Funcion: {Funcion}\n"+
                 $"---------\n";
